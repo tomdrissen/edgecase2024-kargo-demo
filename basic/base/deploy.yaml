@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-basic
+  labels:
+    project: demo-basic
+    app: alpine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: demo-basic
+      app: alpine
+  template:
+    metadata:
+      labels:
+        project: demo-basic
+        app: alpine
+    spec:
+      containers:
+      - name: alpine 
+        image: ghcr.io/linuxcontainers/alpine:placeholder
+        command: ["sleep", "infinity"]

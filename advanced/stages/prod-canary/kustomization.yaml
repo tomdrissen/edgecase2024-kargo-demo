@@ -5,4 +5,4 @@ resources:
 - ../../base
 images:
 - name: ghcr.io/linuxcontainers/alpine
-  newTag: "3.20"
+  newTag: 3.18.0
